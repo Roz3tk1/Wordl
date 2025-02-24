@@ -1,0 +1,215 @@
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --square-bg: #fff;
+    --square-border: #ccc;
+    --key-bg: #fff;
+    --key-border: #ccc;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --square-bg: #333;
+    --square-border: #555;
+    --key-bg: #444;
+    --key-border: #666;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.message {
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-color);
+    transition: opacity 0.3s ease;
+}
+
+#game-board {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+
+.square {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--square-border);
+    background-color: var(--square-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.square:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.green {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.yellow {
+    background-color: #FFEB3B;
+}
+
+.gray {
+    background-color: #9E9E9E;
+    color: white;
+}
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.keyboard-row {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+
+.key {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--key-border);
+    background-color: var(--key-bg);
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.key:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.key-green {
+    background-color: #4CAF50 !important;
+    color: white !important;
+}
+
+.key-yellow {
+    background-color: #FFEB3B !important;
+}
+
+.key-gray {
+    background-color: #9E9E9E !important;
+    color: white !important;
+}
+
+.special-key {
+    width: auto;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.special-key:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    opacity: 0.9;
+}
+
+.special-key.enter {
+    background-color: #4CAF50;
+    color: white;
+    min-width: 80px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.special-key.backspace {
+    background-color: #F44336;
+    color: white;
+    min-width: 80px;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.1);
+    padding: 12px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.1);
+    background: rgba(255,255,255,0.2);
+}
+
+#theme-switcher {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+#theme-switcher:hover {
+    opacity: 0.8;
+}
