@@ -33,7 +33,7 @@ HTML, CSS, JavaScript
 ```sh
 git clone https://github.com/Roz3tk1/Wordl.git
 ```
-- берем файл с проектом и открываем его в VS code, в терминале пишем команду:
+- В терминале пишем команду:
 ```sh
 start index.html
 ```
